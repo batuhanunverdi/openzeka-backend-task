@@ -14,7 +14,6 @@ class AlbumRequestDtoSchema(Schema):
         if not value:
             raise ValidationError('Title cannot be empty or null.')
 
-# Örnek kullanım
 schema = AlbumRequestDtoSchema()
 data = {
     "userId": 1,
