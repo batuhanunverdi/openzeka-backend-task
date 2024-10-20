@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "2a8aee29-2e57-44b7-8a12-2ee7a919b9ce",
+		"name": "OpenZeka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19526140"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Leanne Graham\",\r\n    \"username\": \"Bret\",\r\n    \"email\": \"Sincere@april.biz\",\r\n    \"address\": {\r\n      \"street\": \"Kulas Light\",\r\n      \"suite\": \"Apt. 556\",\r\n      \"city\": \"Gwenborough\",\r\n      \"zipcode\": \"92998-3874\",\r\n      \"geo\": {\r\n        \"lat\": \"-37.3159\",\r\n        \"lng\": \"81.1496\"\r\n      }\r\n    },\r\n    \"phone\": \"1-770-736-8031 x56442\",\r\n    \"website\": \"hildegard.org\",\r\n    \"company\": {\r\n      \"name\": \"Romaguera-Crona\",\r\n      \"catchPhrase\": \"Multi-layered client-server neural-net\",\r\n      \"bs\": \"harness real-time e-markets\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/users"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Get All Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/todos"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Todo By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/todos/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Todos By User Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/todos/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Todo / OK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"title\": \"delectus aut autem\",\r\n    \"completed\": false\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/todos"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Todo / 201 Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"title\": \"delectus aut autem\",\r\n    \"completed\": false\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/todos"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Todo / Error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 99,\r\n    \"title\": \"delectus aut autem\",\r\n    \"completed\": false\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/todos"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Get All Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/posts/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post By User Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/posts/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Post / OK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"userId\": 1,\r\n    \"title\": \"sunt aut facere repellat provident\",\r\n    \"body\": \"quia et suscipit\\nsuscipit recusandae\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "Crete a Post / Error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"userId\": 99,\r\n    \"title\": \"sunt aut facere repellat provident\",\r\n    \"body\": \"quia et suscipit\\nsuscipit recusandae\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/posts"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Get All Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/comments"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comment By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/comments/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comment By Post Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/comments/post/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Comment / OK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\": 1,\r\n    \"name\": \"id labore ex et quam laborum\",\r\n    \"email\": \"Eliseo@gardner.biz\",\r\n    \"body\": \"laudantium enim quasi est quidem magnam voluptate \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/comments"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Comment / Error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\": 99,\r\n    \"name\": \"id labore ex et quam laborum\",\r\n    \"email\": \"Eliseo@gardner.biz\",\r\n    \"body\": \"laudantium enim quasi est quidem magnam voluptate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/comments"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Album",
+			"item": [
+				{
+					"name": "Get All Albums",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/albums"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Album By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/albums/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Album By User Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/albums/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create an Album / OK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"userId\": 1,\r\n    \"title\": \"quidem molestiae enim\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/albums"
+					},
+					"response": []
+				},
+				{
+					"name": "Create an Album / Error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"userId\": 99,\r\n    \"title\": \"quidem molestiae enim\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/albums"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Photo",
+			"item": [
+				{
+					"name": "Get All Photos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/photos"
+					},
+					"response": []
+				},
+				{
+					"name": "Get P hotos By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/photos/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Photos By Album Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/photos/album/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Photo/ OK",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"albumId\": 1,\r\n    \"title\": \"accusamus beatae ad facilis cum similique qui sunt\",\r\n    \"url\": \"https://via.placeholder.com/600/92c952\",\r\n    \"thumbnailUrl\": \"https://via.placeholder.com/150/92c952\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/photos"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Photo/ Error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"albumId\": 99,\r\n    \"title\": \"accusamus beatae ad facilis cum similique qui sunt\",\r\n    \"url\": \"https://via.placeholder.com/600/92c952\",\r\n    \"thumbnailUrl\": \"https://via.placeholder.com/150/92c952\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/comments"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
